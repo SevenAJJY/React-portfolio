@@ -25,7 +25,7 @@
   --bg-color: hsl(var(--hue), 60%, 96%);
   --bg-white: hsl(0, 0%, 100%);
   /************ Border Colors *************/
-  --border-color: hsl(var(--hue), 48%, 80%);
+  --border-color: hsl(var(--hue) 48% 80% / 50%);
   /************ shadow Colors *************/
   --shadow: 0 0 10px hsla(var(--hue), 57%, 63%, 0.3);
   --focus-shadow: 0 0 10px hsla(var(--hue), 57%, 63%, 0.6);
@@ -58,6 +58,10 @@ body.t-dark {
   --border-color: hsl(var(--hue), 15%, 30%);
   /************ shadow Colors *************/
   --shadow: 0 0 10px hsla(var(--hue), 19%, 7%, 0.9);
+}
+
+body {
+  background: url("./assets/main-bg-light.png");
 }
 
 /* Responsive Typography */
