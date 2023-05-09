@@ -1,0 +1,221 @@
+/* Google Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&family=RocknRoll+One&display=swap");
+
+/* Variables CSS */
+
+:root {
+  --hue: 266;
+  --sat: 70%;
+  --lightness: 55%;
+  --main-color: hsl(var(--hue), var(--sat), var(--lightness));
+  --main-color-dcv: hsl(var(--hue) var(--sat) var(--lightness) / 82%);
+  --main-color-light: hsl(var(--hue) var(--sat) var(--lightness) / 31%);
+  --main-color-x-light: hsl(var(--hue) var(--sat) var(--lightness) / 12%);
+  --gradient-hover-img: to bottom,
+    hsl(var(--hue) var(--sat) var(--lightness) / 1%) 0,
+    hsl(var(--hue) var(--sat) var(--lightness) / 25%) 25%,
+    hsl(var(--hue) var(--sat) var(--lightness) / 80%) 75%,
+    hsl(var(--hue) var(--sat) var(--lightness) / 100%) 100%;
+  /************ Text Colors *************/
+  --text-white: hsl(0, 0%, 100%);
+  --text-color: #1c1b1c;
+  /************ bg Colors *************/
+  --body-bg-color: hsl(var(--hue), 60%, 94%);
+  --bg-color: hsl(var(--hue), 60%, 96%);
+  --bg-white: hsl(0, 0%, 100%);
+  /************ Border Colors *************/
+  --border-color: hsl(var(--hue), 48%, 80%);
+  /************ shadow Colors *************/
+  --shadow: 0 0 10px hsla(var(--hue), 57%, 63%, 0.3);
+  --focus-shadow: 0 0 10px hsla(var(--hue), 57%, 63%, 0.6);
+  /************ font size *************/
+  --fs-4xl: 3.125rem;
+  --fs-3xl: 2.188rem;
+  --fs-2xl: 1.625rem;
+  --fs-xl: 1.25rem;
+  --fs-lg: 1.125rem;
+  --fs-md: 1rem;
+  --fs-sm: 0.875rem;
+  --fs-xs: 0.75rem;
+  /************ font weight *************/
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+  /************ font family *************/
+  --body-font: "Poppins", sans-serif;
+}
+
+body.t-dark {
+  /************ Text Colors *************/
+  --text-color: #f1f6ff;
+  /************ bg Colors *************/
+  --body-bg-color: hsl(var(--hue), 20%, 10%);
+  --bg-color: hsl(var(--hue), 13%, 17%);
+  /************ Border Colors *************/
+  --border-color: hsl(var(--hue), 15%, 30%);
+  /************ shadow Colors *************/
+  --shadow: 0 0 10px hsla(var(--hue), 19%, 7%, 0.9);
+}
+
+/* Responsive Typography */
+
+/******************************************* BASE **********************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-500);
+}
+
+body {
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text-color);
+  font-weight: var(--fw-700);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/******************************************* REUSABLE CSS CLASSES **********************************************/
+
+.section {
+  padding: 6rem 0 2rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: 4rem;
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+/******************************************* LAYOUT **********************************************/
+
+.container {
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/******************************************* BUTTONS **********************************************/
+
+.button {
+  display: inline-block;
+  background-color: var(--title-color);
+  color: var(--container-color);
+  padding: 1.25rem 2rem;
+  border-radius: 1rem;
+  font-weight: var(--font-medium);
+  width: fit-content;
+  gap: 0.5rem;
+}
+
+.button:hover {
+  background-color: var(--title-color-dark);
+}
+
+.button__icon {
+  margin-left: var(--mb-0-5);
+}
+
+.button--flex {
+  display: flex;
+  align-items: center;
+}
+
+/******************************************* BREAKPOINTS **********************************************/
+
+/* for large devices */
+
+@media screen and (max-width: 992px) {
+  .container {
+    margin: 0 var(--mb-1-5);
+  }
+  .button {
+    padding: 1rem 1.75rem;
+  }
+  .button__icon {
+    height: 22px;
+    width: 22px;
+  }
+}
+
+/* for medium devices */
+
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0 0 var(--header-height) 0;
+  }
+  .section {
+    padding: 2rem 0 4rem;
+  }
+  .section__subtitle {
+    margin-bottom: var(--mb-3);
+  }
+}
+
+@media screen and (max-width: 576px) {
+}
+
+/* for small devices */
+
+@media screen and (max-width: 350px) {
+  :root {
+    --big-font-size: 2.25rem;
+  }
+  .container {
+    margin: 0 var(--mb-1);
+  }
+}
