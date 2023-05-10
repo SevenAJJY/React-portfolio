@@ -1,6 +1,6 @@
 /* Google Fonts */
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&family=RocknRoll+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&family=RocknRoll+One&display=swap");
 
 /* Variables CSS */
 
@@ -45,7 +45,7 @@
   --fw-700: 700;
   --fw-800: 800;
   /************ font family *************/
-  --body-font: "Poppins", sans-serif;
+  --body-font: "Josefin Sans", "Poppins", sans-serif;
 }
 
 body.t-dark {
@@ -118,20 +118,27 @@ img {
   height: auto;
 }
 
+::selection {
+  background-color: var(--main-color);
+  color: var(--text-white);
+}
+
 /******************************************* REUSABLE CSS CLASSES **********************************************/
 
 .section {
   padding: 6rem 0 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .section__title {
-  font-size: var(--h1-font-size);
-  color: var(--title-color);
+  font-size: var(--fs-2xl);
+  color: var(--text-color);
 }
 
 .section__subtitle {
   display: block;
-  font-size: var(--small-font-size);
+  font-size: var(--fs-sm);
   margin-bottom: 4rem;
 }
 
@@ -155,59 +162,21 @@ img {
 
 /******************************************* BUTTONS **********************************************/
 
-.button {
-  display: inline-block;
-  background-color: var(--title-color);
-  color: var(--container-color);
-  padding: 1.25rem 2rem;
-  border-radius: 1rem;
-  font-weight: var(--font-medium);
-  width: fit-content;
-  gap: 0.5rem;
-}
-
-.button:hover {
-  background-color: var(--title-color-dark);
-}
-
-.button__icon {
-  margin-left: var(--mb-0-5);
-}
-
-.button--flex {
-  display: flex;
-  align-items: center;
-}
-
 /******************************************* BREAKPOINTS **********************************************/
+
+/* for x-large devices */
+
+@media screen and (max-width: 1200px) {
+}
 
 /* for large devices */
 
 @media screen and (max-width: 992px) {
-  .container {
-    margin: 0 var(--mb-1-5);
-  }
-  .button {
-    padding: 1rem 1.75rem;
-  }
-  .button__icon {
-    height: 22px;
-    width: 22px;
-  }
 }
 
 /* for medium devices */
 
 @media screen and (max-width: 768px) {
-  body {
-    margin: 0 0 var(--header-height) 0;
-  }
-  .section {
-    padding: 2rem 0 4rem;
-  }
-  .section__subtitle {
-    margin-bottom: var(--mb-3);
-  }
 }
 
 @media screen and (max-width: 576px) {
@@ -216,10 +185,4 @@ img {
 /* for small devices */
 
 @media screen and (max-width: 350px) {
-  :root {
-    --big-font-size: 2.25rem;
-  }
-  .container {
-    margin: 0 var(--mb-1);
-  }
 }
