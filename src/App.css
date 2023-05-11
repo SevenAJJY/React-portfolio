@@ -88,6 +88,7 @@ textarea {
 }
 
 body {
+  overflow-x: hidden;
   color: var(--text-color);
 }
 
@@ -128,29 +129,67 @@ img {
 .section {
   padding: 6rem 0 2rem;
   position: relative;
-  overflow: hidden;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
 }
 
 .section__title {
-  font-size: var(--fs-2xl);
+  font-size: var(--fs-3xl);
   color: var(--text-color);
 }
 
 .section__subtitle {
-  display: block;
-  font-size: var(--fs-sm);
-  margin-bottom: 4rem;
+  display: inline-block;
+  font-size: var(--fs-md);
+  position: relative;
+  padding: 0 2.3rem;
 }
 
-.section__title,
-.section__subtitle {
-  text-align: center;
+.section__subtitle::before,
+.section__subtitle::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 30px;
+  background-color: var(--main-color);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.section__subtitle::before {
+  left: 0;
+}
+
+.section__subtitle::after {
+  right: 0;
+}
+
+.circle-draw,
+.dots {
+  position: absolute;
+}
+
+.dots {
+  background-image: radial-gradient(#a1a1a1 1.2px, transparent 0);
+  background-size: 13px 13px;
+  border-radius: 10rem;
+  height: 15rem;
+  opacity: 0.5;
+  width: 15rem;
+}
+
+.circle-draw--bordered {
+  border: 1px solid var(--main-color);
+  border-radius: 15rem;
 }
 
 /******************************************* LAYOUT **********************************************/
 
 .container {
-  max-width: 968px;
+  max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -160,6 +199,11 @@ img {
   gap: 1.5rem;
 }
 
+.section-padd {
+  padding: 0 100px;
+  transition: all 0.3s ease;
+}
+
 /******************************************* BUTTONS **********************************************/
 
 /******************************************* BREAKPOINTS **********************************************/
@@ -167,6 +211,13 @@ img {
 /* for x-large devices */
 
 @media screen and (max-width: 1200px) {
+}
+
+@media (max-width: 1024px) {
+  .section-padd {
+    transition: all 0.3s ease;
+    padding: 10px;
+  }
 }
 
 /* for large devices */
