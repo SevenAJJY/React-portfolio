@@ -51,3 +51,66 @@ export const statistics = [
     icon: BiSupport,
   },
 ];
+
+export const skills = [
+  {
+    id: 1,
+    name: "HTML",
+    progress: "90",
+  },
+  {
+    id: 2,
+    name: "CSS",
+    progress: "85",
+  },
+  {
+    id: 3,
+    name: "JavaScript",
+    progress: "80",
+  },
+  {
+    id: 4,
+    name: "Bootstrap 5",
+    progress: "70",
+  },
+  {
+    id: 5,
+    name: "React JS",
+    progress: "60",
+  },
+  {
+    id: 6,
+    name: "RTk",
+    progress: "60",
+  },
+  {
+    id: 7,
+    name: "PHP",
+    progress: "90",
+  },
+  {
+    id: 8,
+    name: "JAVA",
+    progress: "50",
+  },
+  {
+    id: 9,
+    name: "Python",
+    progress: "50",
+  },
+  {
+    id: 10,
+    name: "MySQL",
+    progress: "80",
+  },
+  {
+    id: 11,
+    name: "SQL Server",
+    progress: "80",
+  },
+  {
+    id: 12,
+    name: "Github/Git",
+    progress: "70",
+  },
+];

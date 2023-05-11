@@ -3,15 +3,16 @@ import aboutImg from "../../assets/sevenajjy.jpeg";
 import Info from "./Info";
 import "./About.css";
 import cv from "../../assets/cv.pdf";
+import Skills from "./Skills";
 
 const About = () => {
   return (
-    <main className=" container">
+    <main className="container">
       <section className="about section">
-        <div className="dots home__port"></div>
-        <div className="dots home__port"></div>
-        <div className="dots home__port"></div>
-        <div className="circle-draw circle-draw__welcome circle-draw--bordered"></div>
+        <div className="dots home__port-1"></div>
+        <div className="dots home__port-2"></div>
+        <div className="dots home__port-3"></div>
+        <div className="circle-draw circle-draw__welcome-4 circle-draw--bordered"></div>
         <div className="section-title">
           <h2 className="section__title">About Me</h2>
           <p className="section__subtitle">Who I am</p>
@@ -46,6 +47,20 @@ const About = () => {
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="skills section">
+        <div className="dots home__port-5"></div>
+        <div className="dots home__port-6"></div>
+        <div className="dots home__port-7"></div>
+        <div className="circle-draw circle-draw__welcome-8 circle-draw--bordered"></div>
+        <div className="section-title">
+          <h2 className="section__title">Skills</h2>
+          <p className="section__subtitle">My technical level</p>
+        </div>
+        <div className="skills__container grid section-padd">
+          <Skills />
         </div>
       </section>
     </main>

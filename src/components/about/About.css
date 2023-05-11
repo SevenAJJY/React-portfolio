@@ -46,14 +46,24 @@
   grid-template-columns: repeat(12, 1fr);
 }
 
-.home__port:first-child {
+.about .home__port-1 {
   top: 83%;
-  height: 13rem;
+  height: 15rem;
   left: 49%;
   width: 16rem;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
-.home__port:nth-child(2) {
+.about .home__port-2 {
+  top: 0%;
+  height: 39rem;
+  left: -35%;
+  width: 20rem;
+  transform: translate(70%, 50%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.about .home__port-3 {
   top: -41%;
   height: 20rem;
   right: 7%;
@@ -62,21 +72,15 @@
   border-radius: 50%;
 }
 
-.home__port:nth-child(3) {
-  top: -41%;
-  height: 20rem;
-  right: 7%;
+.circle-draw__welcome-4 {
+  height: 8rem;
+  right: -16rem;
+  top: -3rem;
   width: 20rem;
-  transform: translate(70%, 50%);
-  border-radius: 50%;
-}
-
-.circle-draw__welcome:nth-child(4) {
-  top: -45%;
-  height: 35rem;
-  right: -27%;
-  width: 20rem;
-  transform: unset;
+  transform: rotate(136deg);
+  background: var(--main-color-x-light);
+  border: 1px solid var(--main-color);
+  border-radius: 100px;
 }
 
 .about__img {
@@ -279,6 +283,101 @@
   width: 0;
 }
 
+/**************** Start Skills section *********************/
+
+.skills__container {
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 4rem;
+  justify-content: center;
+}
+
+.skill__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.skill__box::after {
+  content: "%";
+  position: absolute;
+  left: 53%;
+  top: 50%;
+  transform: translate(100%, -50%);
+  font-size: var(--fs-xs);
+  color: var(--main-color);
+}
+
+.progress__circle {
+  width: 128px;
+  height: 128px;
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: var(--main-color) !important;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+  fill: var(--main-color) !important;
+  position: relative;
+}
+
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: var(--main-color-light) !important;
+}
+
+.skills__name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  font-size: var(--fs-xs);
+}
+
+.skills .home__port-5 {
+  bottom: -6rem;
+  -webkit-clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+  height: 24rem;
+  right: -21rem;
+  width: 36rem;
+}
+
+.skills .home__port-6 {
+  top: 36rem;
+  left: -7rem;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+.skills .home__port-7 {
+  height: 10rem;
+  width: 10rem;
+  bottom: 15rem;
+  right: 32rem;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.circle-draw__welcome-8 {
+  right: -20rem;
+  bottom: 0rem;
+  height: 23rem;
+  width: 13rem;
+  transform: unset;
+  background: var(--main-color-x-light);
+}
+
 /******************************************* BREAKPOINTS **********************************************/
 
 /* for large devices */
@@ -306,20 +405,40 @@
     margin-top: 25px;
     align-items: center;
   }
-  .home__port:nth-child(2) {
+  .home__port-1 {
     top: -20%;
     right: 18%;
     width: 20rem;
   }
-  .circle-draw__welcome:nth-child(4) {
+  .about .home__port-3 {
+    top: -18%;
+  }
+  .circle-draw__welcome-4 {
     top: -30%;
     height: 35rem;
     right: -70%;
+  }
+  .circle-draw__welcome-5 {
+    height: 8rem;
+    right: -8rem;
+    top: 34rem;
+    width: 20rem;
+  }
+  .about .home__port-2 {
+    height: 29rem;
+    left: -45%;
+    width: 15rem;
+  }
+  .skills__container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (max-width: 576px) {
   .home__info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skills__container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
