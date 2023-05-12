@@ -114,3 +114,5 @@ export const skills = [
     progress: "70",
   },
 ];
+
+// export const

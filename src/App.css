@@ -134,6 +134,7 @@ img {
 .section-title {
   text-align: center;
   margin-bottom: 4rem;
+  position: relative;
 }
 
 .section__title {

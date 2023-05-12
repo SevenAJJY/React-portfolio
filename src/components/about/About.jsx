@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import aboutImg from "../../assets/sevenajjy.jpeg";
 import Info from "./Info";
 import "./About.css";
 import cv from "../../assets/cv.pdf";
 import Skills from "./Skills";
+import { SlBriefcase, SlGraduation } from "react-icons/sl";
+import { GoCalendar } from "react-icons/go";
 
 const About = () => {
+  const [toggleState, setToggleState] = useState("edu");
+
+  const toggleTab = (tab) => {
+    setToggleState(tab);
+  };
   return (
     <main className="container">
       <section className="about section">
@@ -61,6 +68,124 @@ const About = () => {
         </div>
         <div className="skills__container grid section-padd">
           <Skills />
+        </div>
+      </section>
+
+      <section className="resume section">
+        <div className="dots home__port-9"></div>
+        <div className="dots home__port-10"></div>
+        <div className="dots home__port-11"></div>
+        <div className="circle-draw circle-draw__welcome-12 circle-draw--bordered"></div>
+        <div className="section-title">
+          <h2 className="section__title title-size">Experience & Education</h2>
+          <p className="section__subtitle">My personal journey</p>
+        </div>
+        <div className="resume__container ">
+          <div className="resume__tabs">
+            <div
+              className={
+                toggleState === "edu"
+                  ? "resume__button tabs-active"
+                  : "resume__button"
+              }
+              onClick={() => toggleTab("edu")}
+            >
+              <SlGraduation /> Education
+            </div>
+
+            <div
+              className={
+                toggleState === "exp"
+                  ? "resume__button tabs-active"
+                  : "resume__button"
+              }
+              onClick={() => toggleTab("exp")}
+            >
+              <SlBriefcase /> Experience
+            </div>
+          </div>
+
+          <div className="resume__sections">
+            <div
+              className={
+                toggleState === "edu"
+                  ? "resume__content resume__content-active"
+                  : "resume__content"
+              }
+            >
+              <div className="resume__data">
+                <div>
+                  <h3 className="resume__title">
+                    DTS en Développement Multimédia
+                  </h3>
+                  <span className="resume__subtitle">OFPPT - Morocco</span>
+                  <div className="resume__calender">
+                    <GoCalendar /> 2020 - 2022
+                  </div>
+                </div>
+
+                <div>
+                  <span className="resume__rounder"></span>
+                  <span className="resume__line"></span>
+                </div>
+              </div>
+
+              <div className="resume__data">
+                <div></div>
+                <div>
+                  <span className="resume__rounder"></span>
+                  <span className="resume__line"></span>
+                </div>
+                <div>
+                  <h3 className="resume__title">Baccalauréat SVT</h3>
+                  <span className="resume__subtitle">
+                    Lycée Alqods - Morocco
+                  </span>
+                  <div className="resume__calender">
+                    <GoCalendar /> 2019 - 2020
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className={
+                toggleState === "exp"
+                  ? "resume__content resume__content-active"
+                  : "resume__content"
+              }
+            >
+              <div className="resume__data">
+                <div>
+                  <h3 className="resume__title">Freelancer</h3>
+                  <span className="resume__subtitle">Morocco</span>
+                  <div className="resume__calender">
+                    <GoCalendar /> 2021 - present
+                  </div>
+                </div>
+
+                <div>
+                  <span className="resume__rounder"></span>
+                  <span className="resume__line"></span>
+                </div>
+              </div>
+
+              <div className="resume__data">
+                <div></div>
+                <div>
+                  <span className="resume__rounder"></span>
+                  <span className="resume__line"></span>
+                </div>
+                <div>
+                  <h3 className="resume__title">Stagiaire</h3>
+                  <span className="resume__subtitle">Radeec - Morocco</span>
+                  <div className="resume__calender">
+                    <GoCalendar /> 2022
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

@@ -378,6 +378,153 @@
   background: var(--main-color-x-light);
 }
 
+/**************** Start Skills section *********************/
+
+.resume__container {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.resume__tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.resume__button {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-500);
+  color: var(--text-color);
+  margin: 0 1rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.resume__button:hover {
+  opacity: 0.7;
+}
+
+.resume__button::after {
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-60%);
+  background: var(--main-color-light);
+  display: none;
+}
+
+.tabs-active.resume__button::after {
+  display: block;
+}
+
+.resume__sections {
+  display: grid;
+  grid-template-columns: 0.5fr;
+  justify-content: center;
+}
+
+.resume__content {
+  display: none;
+}
+
+.resume__content-active {
+  display: block;
+}
+
+.resume__data {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  column-gap: 2.5rem;
+}
+
+.resume__title {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-600);
+  margin-bottom: 0.3rem;
+}
+
+.resume__subtitle {
+  display: inline-block;
+  font-size: var(--fs-sm);
+  margin-bottom: 1rem;
+}
+
+.resume__calender {
+  font-size: var(--fs-sm);
+}
+
+.resume__rounder {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  background: var(--main-color);
+  position: relative;
+  z-index: 1;
+}
+
+.resume__line {
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: var(--text-color);
+  transform: translate(6px, -7px);
+}
+
+.home__port-9 {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.home__port-10 {
+  left: 0%;
+  top: 70%;
+  width: 10rem;
+  height: 10rem;
+  clip-path: polygon(
+    50% 0%,
+    90% 20%,
+    100% 60%,
+    75% 100%,
+    25% 100%,
+    0% 60%,
+    10% 20%
+  );
+  border-radius: unset;
+}
+
+.home__port-11 {
+  left: 74%;
+  top: 0%;
+  transform: translate(-50%, 100%);
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+.circle-draw__welcome-12 {
+  top: 59%;
+  left: 72%;
+  height: 3rem;
+  width: 2rem;
+}
+
 /******************************************* BREAKPOINTS **********************************************/
 
 /* for large devices */
@@ -432,6 +579,22 @@
   .skills__container {
     grid-template-columns: repeat(3, 1fr);
   }
+  .resume__sections {
+    grid-template-columns: initial;
+  }
+  .resume__data {
+    column-gap: 0.5rem;
+  }
+  .resume__container {
+    margin: 0 1.5rem;
+  }
+  .title-size {
+    font-size: 1.8rem;
+  }
+  .resume__button {
+    font-size: 1.4rem;
+    margin: 0 0.5rem;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -441,9 +604,24 @@
   .skills__container {
     grid-template-columns: repeat(2, 1fr);
   }
+  .title-size {
+    font-size: 1.6rem;
+  }
+  .resume__button {
+    font-size: 1.3rem;
+  }
 }
 
 /* for small devices */
 
 @media screen and (max-width: 350px) {
+  .resume__data {
+    column-gap: 0.5rem;
+  }
+  .resume__button {
+    font-size: 1.2rem;
+  }
+  .resume__container {
+    margin: 0 1rem;
+  }
 }
