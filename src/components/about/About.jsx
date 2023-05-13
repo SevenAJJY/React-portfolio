@@ -6,6 +6,7 @@ import cv from "../../assets/cv.pdf";
 import Skills from "./Skills";
 import { SlBriefcase, SlGraduation } from "react-icons/sl";
 import { GoCalendar } from "react-icons/go";
+import { motion } from "framer-motion";
 
 const About = () => {
   const [toggleState, setToggleState] = useState("edu");
@@ -63,8 +64,8 @@ const About = () => {
         <div className="dots home__port-7"></div>
         <div className="circle-draw circle-draw__welcome-8 circle-draw--bordered"></div>
         <div className="section-title">
-          <h2 className="section__title">Skills</h2>
-          <p className="section__subtitle">My technical level</p>
+          <h2 className="section__title">Professional Skills</h2>
+          <p className="section__subtitle">My talent</p>
         </div>
         <div className="skills__container grid section-padd">
           <Skills />
@@ -106,7 +107,12 @@ const About = () => {
           </div>
 
           <div className="resume__sections">
-            <div
+            <motion.div
+              layout
+              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scale: 0.6 }}
+              exit={{ opacity: 0.8, scale: 0.6 }}
+              transition={{ duration: 0.3 }}
               className={
                 toggleState === "edu"
                   ? "resume__content resume__content-active"
@@ -146,9 +152,14 @@ const About = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div
+            <motion.div
+              layout
+              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scale: 0.6 }}
+              exit={{ opacity: 0.8, scale: 0.6 }}
+              transition={{ duration: 0.3 }}
               className={
                 toggleState === "exp"
                   ? "resume__content resume__content-active"
@@ -160,7 +171,7 @@ const About = () => {
                   <h3 className="resume__title">Freelancer</h3>
                   <span className="resume__subtitle">Morocco</span>
                   <div className="resume__calender">
-                    <GoCalendar /> 2021 - present
+                    <GoCalendar /> 2022 - present
                   </div>
                 </div>
 
@@ -184,7 +195,7 @@ const About = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

@@ -187,6 +187,15 @@ img {
   border-radius: 15rem;
 }
 
+.card {
+  background: var(--main-color-x-light);
+  overflow: hidden;
+  text-align: left;
+  position: relative;
+  padding: 30px;
+  border-radius: 20px;
+}
+
 /******************************************* LAYOUT **********************************************/
 
 .container {
