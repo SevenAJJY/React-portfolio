@@ -146,7 +146,7 @@ export const projects = [
   {
     id: 2,
     img: port3,
-    category: "Web Design",
+    category: "Web design",
     name: "Previous portfolio",
     languages: ["HTML", "CSS", "JavaScript"],
     desc: "― This is my previous portfolio to display my work and communicate with me.",
@@ -156,8 +156,8 @@ export const projects = [
   {
     id: 3,
     img: nadafa,
-    category: "Web Design",
-    name: "Nadava services",
+    category: "Web design",
+    name: "Nadafa services",
     languages: ["HTML", "CSS", "JavaScript"],
     desc: "― NADAFA - Cleaning Service Website Using HTML CSS & JavaScript.",
     preview: "https://sevenajjy.github.io/nadafa/",

@@ -47,7 +47,7 @@ const About = () => {
               </p>
             </article>
             <div className="about-btn">
-              <a className="about__btn" href={cv} download="s">
+              <a className="about__btn" href={cv} download="">
                 <span className="top-key"></span>
                 <span className="text">Download CV</span>
                 <span className="bottom-key-1"></span>

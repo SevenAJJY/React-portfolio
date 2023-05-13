@@ -226,7 +226,7 @@ img {
 @media (max-width: 1024px) {
   .section-padd {
     transition: all 0.3s ease;
-    padding: 10px;
+    padding: 15px;
   }
 }
 
