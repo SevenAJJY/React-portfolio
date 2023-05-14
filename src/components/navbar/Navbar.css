@@ -6,15 +6,15 @@
   padding: 3.75rem 1.875rem;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  background-color: hsl(0deg 0% 100% / 52%);
+  background-color: var(--slide-bg);
   min-height: 100vh;
   z-index: 10000;
-  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: all 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
 }
 
 .show-menu {
   left: 0;
-  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: all 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
   box-shadow: var(--shadow);
 }
 
@@ -75,7 +75,7 @@
   border-radius: 5px;
   padding: 12px 9px;
   transition: all 0.3s ease;
-  z-index: 2;
+  z-index: 11;
 }
 
 .nav__toggle span {

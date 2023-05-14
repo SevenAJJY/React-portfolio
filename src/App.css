@@ -5,245 +5,249 @@
 /* Variables CSS */
 
 :root {
-  --hue: 266;
-  --sat: 70%;
-  --lightness: 55%;
-  --main-color: hsl(var(--hue), var(--sat), var(--lightness));
-  --main-color-dcv: hsl(var(--hue) var(--sat) var(--lightness) / 82%);
-  --main-color-light: hsl(var(--hue) var(--sat) var(--lightness) / 31%);
-  --main-color-x-light: hsl(var(--hue) var(--sat) var(--lightness) / 12%);
-  --gradient-hover-img: to bottom,
-    hsl(var(--hue) var(--sat) var(--lightness) / 1%) 0,
-    hsl(var(--hue) var(--sat) var(--lightness) / 25%) 25%,
-    hsl(var(--hue) var(--sat) var(--lightness) / 80%) 75%,
-    hsl(var(--hue) var(--sat) var(--lightness) / 100%) 100%;
-  /************ Text Colors *************/
-  --text-white: hsl(0, 0%, 100%);
-  --text-color: #1c1b1c;
-  /************ bg Colors *************/
-  --body-bg-color: hsl(var(--hue), 60%, 94%);
-  --bg-color: hsl(var(--hue), 60%, 96%);
-  --bg-white: hsl(0, 0%, 100%);
-  /************ Border Colors *************/
-  --border-color: hsl(var(--hue) 48% 80% / 50%);
-  /************ shadow Colors *************/
-  --shadow: 0 0 10px hsla(var(--hue), 57%, 63%, 0.3);
-  --focus-shadow: 0 0 10px hsla(var(--hue), 57%, 63%, 0.6);
-  /************ font size *************/
-  --fs-4xl: 3.125rem;
-  --fs-3xl: 2.188rem;
-  --fs-2xl: 1.625rem;
-  --fs-xl: 1.25rem;
-  --fs-lg: 1.125rem;
-  --fs-md: 1rem;
-  --fs-sm: 0.875rem;
-  --fs-xs: 0.75rem;
-  /************ font weight *************/
-  --fw-400: 400;
-  --fw-500: 500;
-  --fw-600: 600;
-  --fw-700: 700;
-  --fw-800: 800;
-  /************ font family *************/
-  --body-font: "Josefin Sans", "Poppins", sans-serif;
-}
-
-body.t-dark {
-  /************ Text Colors *************/
-  --text-color: #f1f6ff;
-  /************ bg Colors *************/
-  --body-bg-color: hsl(var(--hue), 20%, 10%);
-  --bg-color: hsl(var(--hue), 13%, 17%);
-  /************ Border Colors *************/
-  --border-color: hsl(var(--hue), 15%, 30%);
-  /************ shadow Colors *************/
-  --shadow: 0 0 10px hsla(var(--hue), 19%, 7%, 0.9);
+    --hue: 266;
+    --sat: 70%;
+    --lightness: 55%;
+    --main-color: hsl(var(--hue), var(--sat), var(--lightness));
+    --main-color-dcv: hsl(var(--hue) var(--sat) var(--lightness) / 82%);
+    --main-color-light: hsl(var(--hue) var(--sat) var(--lightness) / 31%);
+    --main-color-x-light: hsl(var(--hue) var(--sat) var(--lightness) / 12%);
+    --gradient-hover-img: to bottom, hsl(var(--hue) var(--sat) var(--lightness) / 1%) 0, hsl(var(--hue) var(--sat) var(--lightness) / 25%) 25%, hsl(var(--hue) var(--sat) var(--lightness) / 80%) 75%, hsl(var(--hue) var(--sat) var(--lightness) / 100%) 100%;
+    /************ Text Colors *************/
+    --text-white: hsl(0, 0%, 100%);
+    --text-color: #1c1b1c;
+    /************ bg Colors *************/
+    --body-bg-color: hsl(var(--hue), 60%, 94%);
+    --bg-color: hsl(var(--hue), 60%, 96%);
+    --bg-white: hsl(0, 0%, 100%);
+    --slide-bg: hsl(0deg 0% 100% / 52%);
+    /************ Border Colors *************/
+    --border-color: hsl(var(--hue) 48% 80% / 50%);
+    /************ shadow Colors *************/
+    --shadow: 0 0 10px hsla(var(--hue), 57%, 63%, 0.3);
+    --focus-shadow: 0 0 10px hsla(var(--hue), 57%, 63%, 0.6);
+    /************ font size *************/
+    --fs-4xl: 3.125rem;
+    --fs-3xl: 2.188rem;
+    --fs-2xl: 1.625rem;
+    --fs-xl: 1.25rem;
+    --fs-lg: 1.125rem;
+    --fs-md: 1rem;
+    --fs-sm: 0.875rem;
+    --fs-xs: 0.75rem;
+    /************ font weight *************/
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+    /************ font family *************/
+    --body-font: "Josefin Sans", "Poppins", sans-serif;
 }
 
 body {
-  background: url("./assets/main-bg-light.png");
+    background: url("./assets/main-bg-light.png");
 }
 
+body.theme-dark {
+    background: url("./assets/main-bg-dark.png");
+    /************ Text Colors *************/
+    --text-color: #f1f6ff;
+    /************ bg Colors *************/
+    --body-bg-color: hsl(var(--hue), 20%, 10%);
+    --bg-color: hsl(var(--hue), 13%, 17%);
+    --slide-bg: #383838
+    /************ Border Colors *************/
+    --border-color: hsl(var(--hue), 15%, 30%);
+    /************ shadow Colors *************/
+    --shadow: 0 0 10px hsla(var(--hue), 19%, 7%, 0.9);
+}
+
+
 /* Responsive Typography */
+
 
 /******************************************* BASE **********************************************/
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body,
 button,
 input,
 textarea {
-  font-family: var(--body-font);
-  font-size: var(--fs-md);
-  font-weight: var(--fw-500);
+    font-family: var(--body-font);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-500);
 }
 
 body {
-  overflow-x: hidden;
-  color: var(--text-color);
+    overflow-x: hidden;
+    color: var(--text-color);
 }
 
 h1,
 h2,
 h3,
 h4 {
-  color: var(--text-color);
-  font-weight: var(--fw-700);
+    color: var(--text-color);
+    font-weight: var(--fw-700);
 }
 
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 button {
-  cursor: pointer;
-  border: none;
-  outline: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 ::selection {
-  background-color: var(--main-color);
-  color: var(--text-white);
+    background-color: var(--main-color);
+    color: var(--text-white);
 }
+
 
 /******************************************* REUSABLE CSS CLASSES **********************************************/
 
 .section {
-  padding: 6rem 0 2rem;
-  position: relative;
+    padding: 6rem 0 2rem;
+    position: relative;
 }
 
 .section-title {
-  text-align: center;
-  margin-bottom: 4rem;
-  position: relative;
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
 }
 
 .section__title {
-  font-size: var(--fs-3xl);
-  color: var(--text-color);
+    font-size: var(--fs-3xl);
+    color: var(--text-color);
 }
 
 .section__subtitle {
-  display: inline-block;
-  font-size: var(--fs-md);
-  position: relative;
-  padding: 0 2.3rem;
+    display: inline-block;
+    font-size: var(--fs-md);
+    position: relative;
+    padding: 0 2.3rem;
 }
 
 .section__subtitle::before,
 .section__subtitle::after {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: 30px;
-  background-color: var(--main-color);
-  top: 50%;
-  transform: translateY(-50%);
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 30px;
+    background-color: var(--main-color);
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .section__subtitle::before {
-  left: 0;
+    left: 0;
 }
 
 .section__subtitle::after {
-  right: 0;
+    right: 0;
 }
 
 .circle-draw,
 .dots {
-  position: absolute;
+    position: absolute;
 }
 
 .dots {
-  background-image: radial-gradient(#a1a1a1 1.2px, transparent 0);
-  background-size: 13px 13px;
-  border-radius: 10rem;
-  height: 15rem;
-  opacity: 0.5;
-  width: 15rem;
+    background-image: radial-gradient(#a1a1a1 1.2px, transparent 0);
+    background-size: 13px 13px;
+    border-radius: 10rem;
+    height: 15rem;
+    opacity: 0.5;
+    width: 15rem;
 }
 
 .circle-draw--bordered {
-  border: 1px solid var(--main-color);
-  border-radius: 15rem;
+    border: 1px solid var(--main-color);
+    border-radius: 15rem;
 }
 
 .card {
-  background: var(--main-color-x-light);
-  overflow: hidden;
-  text-align: left;
-  position: relative;
-  padding: 30px;
-  border-radius: 20px;
+    background: var(--main-color-x-light);
+    overflow: hidden;
+    text-align: left;
+    position: relative;
+    padding: 30px;
+    border-radius: 20px;
 }
+
 
 /******************************************* LAYOUT **********************************************/
 
 .container {
-  max-width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .grid {
-  display: grid;
-  gap: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
 }
 
 .section-padd {
-  padding: 0 100px;
-  transition: all 0.3s ease;
+    padding: 0 100px;
+    transition: all 0.3s ease;
 }
+
 
 /******************************************* BUTTONS **********************************************/
 
+
 /******************************************* BREAKPOINTS **********************************************/
+
 
 /* for x-large devices */
 
-@media screen and (max-width: 1200px) {
-}
+@media screen and (max-width: 1200px) {}
 
 @media (max-width: 1024px) {
-  .section-padd {
-    transition: all 0.3s ease;
-    padding: 15px;
-  }
+    .section-padd {
+        transition: all 0.3s ease;
+        padding: 15px;
+    }
 }
+
 
 /* for large devices */
 
-@media screen and (max-width: 992px) {
-}
+@media screen and (max-width: 992px) {}
+
 
 /* for medium devices */
 
-@media screen and (max-width: 768px) {
-}
+@media screen and (max-width: 768px) {}
 
-@media screen and (max-width: 576px) {
-}
+@media screen and (max-width: 576px) {}
+
 
 /* for small devices */
 
-@media screen and (max-width: 350px) {
-}
+@media screen and (max-width: 350px) {}
