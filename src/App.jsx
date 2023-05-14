@@ -7,12 +7,14 @@ import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Themes from "./components/Themes/Themes";
 
 const App = () => {
   return (
     <>
       <Router>
         <Navbar />
+        <Themes />
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>

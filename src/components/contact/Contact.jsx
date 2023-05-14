@@ -1,12 +1,41 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import "./Contact.css";
 
 import { TbBrandGithub, TbArrowRightRhombus } from "react-icons/tb";
 import { RiMailSendLine } from "react-icons/ri";
-import { FiSend, FiPhoneCall } from "react-icons/fi";
+import { FiPhoneCall } from "react-icons/fi";
+import { CgClose } from "react-icons/cg";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
+import emailjs from "@emailjs/browser";
+
 const Contact = () => {
+  const [showAlert, setShowAlert] = useState(false);
+  const [message, setMessage] = useState("");
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_jjo2pn8",
+        "template_tmk1ldd",
+        form.current,
+        "uYn0JKCEK4zVmKXh-"
+      )
+      .then(
+        (result) => {
+          setMessage("Your message has been sent");
+        },
+        (error) => {
+          setMessage("Error Sending message");
+        }
+      );
+    setShowAlert(!showAlert);
+    e.target.reset();
+  };
+
   return (
     <section className="contact section">
       <div className="dots home__port"></div>
@@ -100,7 +129,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <form className="contact__form">
+        <form ref={form} className="contact__form" onSubmit={sendEmail}>
           <h3 className="contact__title">
             {" "}
             <span style={{ color: "var(--main-color-light)" }}>―</span> Send us
@@ -129,6 +158,39 @@ const Contact = () => {
             <span className="bottom-key-2"></span>
           </button>
         </form>
+
+        <div
+          className={showAlert ? "alert__box show__alert" : "alert__box"}
+          onClick={() => setShowAlert(!showAlert)}
+        >
+          <div className="alert__info" onClick={() => setShowAlert(!showAlert)}>
+            <button className="alert__close">
+              <CgClose />
+            </button>
+            <div className="success-animation">
+              <svg
+                className="checkmark"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 52 52"
+              >
+                <circle
+                  className="checkmark__circle"
+                  cx="26"
+                  cy="26"
+                  r="25"
+                  fill="none"
+                />
+                <path
+                  className="checkmark__check"
+                  fill="none"
+                  d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                />
+              </svg>
+            </div>
+            <h1 className="alert__title">Thank you!</h1>
+            {message && <span className="alert__message">{message}</span>}
+          </div>
+        </div>
       </div>
     </section>
   );
