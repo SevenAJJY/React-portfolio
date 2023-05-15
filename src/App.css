@@ -21,8 +21,6 @@
   --text-white: hsl(0, 0%, 100%);
   --text-color: #1c1b1c;
   /************ bg Colors *************/
-  --body-bg-color: hsl(var(--hue), 60%, 94%);
-  --bg-color: hsl(var(--hue), 60%, 96%);
   --bg-white: hsl(0, 0%, 100%);
   /* --slide-bg: hsl(0deg 0% 100% / 52%); */
   --modal-bg: hsl(0, 0%, 100%);
@@ -59,10 +57,6 @@ body.theme-dark {
   background: url("./assets/main-bg-dark.png");
   /************ Text Colors *************/
   --text-color: #f1f6ff;
-  /************ bg Colors *************/
-  --body-bg-color: hsl(var(--hue), 20%, 10%);
-  --bg-color: hsl(var(--hue), 13%, 17%);
-  /* --slide-bg: #383838; */
   --modal-bg: #383838;
   /************ Border Colors *************/
   --border-color: hsl(var(--hue), 15%, 30%);
@@ -224,32 +218,9 @@ img {
 
 /******************************************* BREAKPOINTS **********************************************/
 
-/* for x-large devices */
-
-@media screen and (max-width: 1200px) {
-}
-
 @media (max-width: 1024px) {
   .section-padd {
     transition: all 0.3s ease;
     padding: 15px;
   }
-}
-
-/* for large devices */
-
-@media screen and (max-width: 992px) {
-}
-
-/* for medium devices */
-
-@media screen and (max-width: 768px) {
-}
-
-@media screen and (max-width: 576px) {
-}
-
-/* for small devices */
-
-@media screen and (max-width: 350px) {
 }

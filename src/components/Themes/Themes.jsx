@@ -52,6 +52,7 @@ const Themes = () => {
               min="0"
               max="360"
               className="hue__slider"
+              value={hue}
             />
             <div className="hue">
               Hue:

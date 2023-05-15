@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 import homeImg from "../../assets/sevenajjy.jpeg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -28,7 +28,10 @@ const Home = () => {
         </div>
       </div>
       <div className="home__text">
-        <span>Hi there ! I'm SevenAJJY.</span>
+        <span style={{ display: "flex" }}>
+          Hi there ! I'm{" "}
+          <span style={{ color: "var(--main-color)" }}>SevenAJJY</span>.
+        </span>
         <h1>Portfolio</h1>
         <p>of a Creative Freelancer & Fullstack Developer ―</p>
       </div>
