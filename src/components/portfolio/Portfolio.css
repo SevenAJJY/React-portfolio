@@ -59,6 +59,7 @@
   font-weight: 600;
   position: relative;
   transition: all 0.7s ease;
+  background: transparent;
 }
 
 .portfolio__list-item::before {

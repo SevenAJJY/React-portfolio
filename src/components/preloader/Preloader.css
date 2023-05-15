@@ -1,0 +1,96 @@
+/* Start pre-loader */
+
+.pre-loader {
+  position: absolute;
+  z-index: 10000000;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  background: url("./assets/main-bg-dark.png");
+  backdrop-filter: blur(5px);
+}
+
+.pre-loader .logo a {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1;
+  display: block;
+  transform: scale(0.9);
+  letter-spacing: 2px;
+  color: var(--main-color);
+  font-family: inherit;
+}
+
+.pre-loader .logo a span {
+  font-size: var(--fs-md);
+  font-weight: 500;
+  color: var(--text-color);
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+.pre-loader .logo a span::before {
+  content: "";
+  position: absolute;
+  background: transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-top: 2px solid var(--text-color);
+  border-right: 2px solid transparent;
+  border-left: 0px solid transparent;
+}
+
+/* body.theme-dark {
+
+} */
+
+.pre-loader .logo a span::after {
+  content: "";
+  position: absolute;
+  top: -18px;
+  right: -7px;
+  background: var(--text-color);
+  width: 8px;
+  height: 8px;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  z-index: 9;
+}
+
+.pre-loader .loader {
+  width: 135px;
+  height: 2px;
+  background: var(--main-color-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.pre-loader .loader:before {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  height: 100%;
+  width: 45px;
+  animation: moving 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+}
+
+@keyframes moving {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

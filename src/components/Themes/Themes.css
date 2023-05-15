@@ -1,47 +1,3 @@
-:root {
-  --hue: 266;
-  --sat: 70%;
-  --lightness: 55%;
-  --main-color: hsl(var(--hue), var(--sat), var(--lightness));
-  --main-color-dcv: hsl(var(--hue) var(--sat) var(--lightness) / 82%);
-  --main-color-light: hsl(var(--hue) var(--sat) var(--lightness) / 31%);
-  --main-color-x-light: hsl(var(--hue) var(--sat) var(--lightness) / 12%);
-  --gradient-hover-img: to bottom,
-    hsl(var(--hue) var(--sat) var(--lightness) / 1%) 0,
-    hsl(var(--hue) var(--sat) var(--lightness) / 25%) 25%,
-    hsl(var(--hue) var(--sat) var(--lightness) / 80%) 75%,
-    hsl(var(--hue) var(--sat) var(--lightness) / 100%) 100%;
-  /************ Text Colors *************/
-  --text-white: hsl(0, 0%, 100%);
-  --text-color: #1c1b1c;
-  /************ bg Colors *************/
-  --body-bg-color: hsl(var(--hue), 60%, 94%);
-  --bg-color: hsl(var(--hue), 60%, 96%);
-  --bg-white: hsl(0, 0%, 100%);
-  /************ Border Colors *************/
-  --border-color: hsl(var(--hue) 48% 80% / 50%);
-  /************ shadow Colors *************/
-  --shadow: 0 0 10px hsla(var(--hue), 57%, 63%, 0.3);
-  --focus-shadow: 0 0 10px hsla(var(--hue), 57%, 63%, 0.6);
-  /************ font size *************/
-  --fs-4xl: 3.125rem;
-  --fs-3xl: 2.188rem;
-  --fs-2xl: 1.625rem;
-  --fs-xl: 1.25rem;
-  --fs-lg: 1.125rem;
-  --fs-md: 1rem;
-  --fs-sm: 0.875rem;
-  --fs-xs: 0.75rem;
-  /************ font weight *************/
-  --fw-400: 400;
-  --fw-500: 500;
-  --fw-600: 600;
-  --fw-700: 700;
-  --fw-800: 800;
-  /************ font family *************/
-  --body-font: "Josefin Sans", "Poppins", sans-serif;
-}
-
 .style__switcher {
   position: fixed;
   right: 0;
@@ -82,6 +38,19 @@
   border-radius: 0.5rem 0 0 0.5rem;
   border: none;
   outline: nones;
+}
+
+.style__switcher-toggler-icon {
+  animation: settings 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+}
+
+@keyframes settings {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .style__switcher h2 {
@@ -226,4 +195,17 @@
 
 .rotate {
   transform: rotate(242deg);
+}
+
+/* for small devices */
+
+@media screen and (max-width: 350px) {
+  .style__switcher {
+    width: 250px;
+  }
+  .style__switcher-main {
+    padding-inline: 2rem;
+    backdrop-filter: blur(35px);
+    -webkit-backdrop-filter: blur(35px);
+  }
 }

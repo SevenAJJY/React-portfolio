@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { HiOutlineCog6Tooth } from "react-icons/hi2";
 import { BsSun, BsMoon } from "react-icons/bs";
+import { IoClose } from "react-icons/io5";
 import "./Themes.css";
 
 const hueValue = localStorage.getItem("_hue")
   ? localStorage.getItem("_hue")
-  : 266;
+  : 272;
 
 const themeDarkLight =
   localStorage.getItem("_theme-dark") === "false" ? false : true;
@@ -31,10 +32,17 @@ const Themes = () => {
         className="style__switcher-toggler"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <HiOutlineCog6Tooth />
+        {isOpen ? (
+          <IoClose className="style__switcher-toggler-icon" />
+        ) : (
+          <HiOutlineCog6Tooth className="style__switcher-toggler-icon" />
+        )}
       </button>
       <div className="style__switcher-main">
-        <h2>― Style Switcher</h2>
+        <h2>
+          <span style={{ color: "var(--main-color", fontWeight: 700 }}>―</span>{" "}
+          Style Switcher
+        </h2>
         <div className="style__switcher-item">
           <p>Theme Color</p>
           <div className="theme__color">
@@ -58,6 +66,7 @@ const Themes = () => {
               onChange={(e) => setCheckbox(e.target.checked)}
               type="checkbox"
               id="form-switcher"
+              checked={checkbox}
             />
             <div className="dark-light_switch">
               <span>

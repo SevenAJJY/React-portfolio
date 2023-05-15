@@ -1,7 +1,6 @@
 import React from "react";
 
 const Tag = ({ languages }) => {
-  console.log(languages);
   return (
     <>
       <div className="portfolio__languages">
