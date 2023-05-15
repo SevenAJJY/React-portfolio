@@ -16,6 +16,7 @@ import Themes from "./components/Themes/Themes";
 import Preloader from "./components/preloader/Preloader";
 
 const App = () => {
+  // const location = useLocation();
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);

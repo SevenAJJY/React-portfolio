@@ -8,6 +8,7 @@ import { CgClose } from "react-icons/cg";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [showAlert, setShowAlert] = useState(false);
@@ -45,23 +46,59 @@ const Contact = () => {
       ></div>
       <div className="dots home__port"></div>
       <div className="circle-draw circle-draw__welcome circle-draw--bordered"></div>
-      <div className="section-title">
+      <motion.div
+        initial={{ transform: "translateY(-100px)" }}
+        animate={{ transform: "translateY(0px)" }}
+        exit={{
+          transform: "translateY(-100px)",
+          transition: { duration: 0.1 },
+        }}
+        transition={{ duration: 0.75, ease: "easeOut" }}
+        className="section-title"
+      >
         <h2 className="section__title title-size">Get in touch</h2>
         <p className="section__subtitle">Contact</p>
-      </div>
+      </motion.div>
       <div className="contact__container container grid section-padd">
         <div className="contact__data">
-          <h3 className="contact__title">
+          <motion.h3
+            initial={{ transform: "translateY(100px)" }}
+            animate={{ transform: "translateY(0px)" }}
+            exit={{
+              transform: "translateY(100px)",
+              transition: { duration: 0.1 },
+            }}
+            transition={{ duration: 0.75, ease: "easeOut" }}
+            className="contact__title"
+          >
             {" "}
             <span style={{ color: "var(--main-color-light)" }}>―</span> Let's
             talk!
-          </h3>
-          <p className="contact__desc">
+          </motion.h3>
+          <motion.p
+            initial={{ transform: "translateY(100px)" }}
+            animate={{ transform: "translateY(0px)" }}
+            exit={{
+              transform: "translateY(100px)",
+              transition: { duration: 0.1 },
+            }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="contact__desc"
+          >
             If to here any work from me or any types of queries , you can send
             me a message from here . It's my pleasure to help you.
-          </p>
+          </motion.p>
 
-          <div className="contact__info">
+          <motion.div
+            initial={{ transform: "translateY(100px)" }}
+            animate={{ transform: "translateY(0px)" }}
+            exit={{
+              transform: "translateY(100px)",
+              transition: { duration: 0.1 },
+            }}
+            transition={{ duration: 0.85, ease: "easeOut" }}
+            className="contact__info"
+          >
             <div className="info__item">
               <RiMailSendLine className="info__icon" />
               <div>
@@ -77,7 +114,16 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="info__item">
+            <motion.div
+              initial={{ transform: "translateY(100px)" }}
+              animate={{ transform: "translateY(0px)" }}
+              exit={{
+                transform: "translateY(100px)",
+                transition: { duration: 0.1 },
+              }}
+              transition={{ duration: 0.9, ease: "easeOut" }}
+              className="info__item"
+            >
               <FiPhoneCall className="info__icon" />
               <div>
                 <a
@@ -90,10 +136,19 @@ const Contact = () => {
                 </a>
                 <span className="info__desc">+212709239818</span>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          <div className="contact__socials">
+          <motion.div
+            initial={{ transform: "translateY(100px)" }}
+            animate={{ transform: "translateY(0px)" }}
+            exit={{
+              transform: "translateY(100px)",
+              transition: { duration: 0.1 },
+            }}
+            transition={{ duration: 0.95, ease: "easeOut" }}
+            className="contact__socials"
+          >
             <a
               href="https://www.instagram.com/yassine_elhajjy/"
               className="contact__social-link"
@@ -126,37 +181,92 @@ const Contact = () => {
             >
               <FaLinkedinIn />
             </a>
-          </div>
+          </motion.div>
         </div>
 
         <form ref={form} className="contact__form" onSubmit={sendEmail}>
-          <h3 className="contact__title">
+          <motion.h3
+            initial={{ transform: "translateY(100px)" }}
+            animate={{ transform: "translateY(0px)" }}
+            exit={{
+              transform: "translateY(100px)",
+              transition: { duration: 0.1 },
+            }}
+            transition={{ duration: 0.75, ease: "easeOut" }}
+            className="contact__title"
+          >
             {" "}
             <span style={{ color: "var(--main-color-light)" }}>―</span> Send us
             a message
-          </h3>
-          <div className="input__box">
+          </motion.h3>
+          <motion.div
+            initial={{ transform: "translateY(100px)" }}
+            animate={{ transform: "translateY(0px)" }}
+            exit={{
+              transform: "translateY(100px)",
+              transition: { duration: 0.1 },
+            }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="input__box"
+          >
             <input type="text" name="fullname" required />
             <span>Full name</span>
-          </div>
-          <div className="input__box">
+          </motion.div>
+          <motion.div
+            initial={{ transform: "translateY(100px)" }}
+            animate={{ transform: "translateY(0px)" }}
+            exit={{
+              transform: "translateY(100px)",
+              transition: { duration: 0.1 },
+            }}
+            transition={{ duration: 0.85, ease: "easeOut" }}
+            className="input__box"
+          >
             <input type="text" name="email" required />
             <span>Email</span>
-          </div>
-          <div className="input__box">
+          </motion.div>
+          <motion.div
+            initial={{ transform: "translateY(100px)" }}
+            animate={{ transform: "translateY(0px)" }}
+            exit={{
+              transform: "translateY(100px)",
+              transition: { duration: 0.1 },
+            }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+            className="input__box"
+          >
             <input type="text" name="subject" required />
             <span>Subject</span>
-          </div>
-          <div className="input__box">
+          </motion.div>
+          <motion.div
+            initial={{ transform: "translateY(100px)" }}
+            animate={{ transform: "translateY(0px)" }}
+            exit={{
+              transform: "translateY(100px)",
+              transition: { duration: 0.1 },
+            }}
+            transition={{ duration: 0.95, ease: "easeOut" }}
+            className="input__box"
+          >
             <textarea name="message" required></textarea>
             <span>Write your message here</span>
-          </div>
-          <button type="submit" className="about__btn">
+          </motion.div>
+          <motion.button
+            initial={{ transform: "translateY(100px)" }}
+            animate={{ transform: "translateY(0px)" }}
+            exit={{
+              transform: "translateY(100px)",
+              transition: { duration: 0.1 },
+            }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            type="submit"
+            className="about__btn"
+          >
             <span className="top-key"></span>
             <span className="text">Send Now</span>
             <span className="bottom-key-1"></span>
             <span className="bottom-key-2"></span>
-          </button>
+          </motion.button>
         </form>
 
         <div

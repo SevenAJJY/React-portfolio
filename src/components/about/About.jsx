@@ -21,40 +21,94 @@ const About = () => {
         <div className="dots home__port-2"></div>
         <div className="dots home__port-3"></div>
         <div className="circle-draw circle-draw__welcome-4 circle-draw--bordered"></div>
-        <div className="section-title">
+        <motion.div
+          initial={{ transform: "translateY(-100px)" }}
+          animate={{ transform: "translateY(0px)" }}
+          exit={{
+            transform: "translateY(-100px)",
+            transition: { duration: 0.1 },
+          }}
+          transition={{ duration: 0.75, ease: "easeOut" }}
+          className="section-title"
+        >
           <h2 className="section__title">About Me</h2>
           <p className="section__subtitle">Who I am</p>
-        </div>
+        </motion.div>
         <div className="about-container grid section-padd">
-          <div className="about__img">
+          <motion.div
+            initial={{ transform: "scale(.5)" }}
+            animate={{ transform: "scale(1)" }}
+            exit={{
+              transform: "scale(.5)",
+              transition: { duration: 0.1 },
+            }}
+            transition={{ duration: 0.75, ease: "easeOut" }}
+            className="about__img"
+          >
             <img src={aboutImg} alt="its me!" />
-          </div>
-          <div className="about__text">
+          </motion.div>
+          <motion.div
+            initial={{ transform: "translateY(100px)" }}
+            animate={{ transform: "translateY(0px)" }}
+            exit={{
+              transform: "translateY(100px)",
+              transition: { duration: 0.1 },
+            }}
+            transition={{ duration: 0.75, ease: "easeOut" }}
+            className="about__text"
+          >
             <Info />
-            <article className="about__text-content">
+            <motion.article
+              initial={{ transform: "translateY(100px)" }}
+              animate={{ transform: "translateY(0px)" }}
+              exit={{
+                transform: "translateY(100px)",
+                transition: { duration: 0.1 },
+              }}
+              transition={{ duration: 0.75, ease: "easeOut" }}
+              className="about__text-content"
+            >
               <p>
                 ― Fullstack Developer, experienced in both Front-end and
                 Back-end development, my name is yassine ELhajjy and my friends
                 call me SevenAJJY.
               </p>
-            </article>
-            <article className="about__text-content">
+            </motion.article>
+            <motion.article
+              initial={{ transform: "translateY(100px)" }}
+              animate={{ transform: "translateY(0px)" }}
+              exit={{
+                transform: "translateY(100px)",
+                transition: { duration: 0.1 },
+              }}
+              transition={{ duration: 0.95, ease: "easeOut" }}
+              className="about__text-content"
+            >
               <p>
                 I'm smiling, I'm positive, super motivated, always willing to
                 learn. I'm here to build positive relationships, find creative
                 solutions to complex problems. I love programming and have a
                 good team spirit.
               </p>
-            </article>
-            <div className="about-btn">
+            </motion.article>
+            <motion.div
+              initial={{ transform: "translateY(100px)" }}
+              animate={{ transform: "translateY(0px)" }}
+              exit={{
+                transform: "translateY(100px)",
+                transition: { duration: 0.1 },
+              }}
+              transition={{ duration: 1.01, ease: "easeOut" }}
+              className="about-btn"
+            >
               <a className="about__btn" href={cv} download="">
                 <span className="top-key"></span>
                 <span className="text">Download CV</span>
                 <span className="bottom-key-1"></span>
                 <span className="bottom-key-2"></span>
               </a>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
@@ -63,10 +117,19 @@ const About = () => {
         <div className="dots home__port-6"></div>
         <div className="dots home__port-7"></div>
         <div className="circle-draw circle-draw__welcome-8 circle-draw--bordered"></div>
-        <div className="section-title">
+        <motion.div
+          initial={{ transform: "translateY(-100px)" }}
+          animate={{ transform: "translateY(0px)" }}
+          exit={{
+            transform: "translateY(-100px)",
+            transition: { duration: 0.1 },
+          }}
+          transition={{ duration: 0.75, ease: "easeOut" }}
+          className="section-title"
+        >
           <h2 className="section__title">Professional Skills</h2>
           <p className="section__subtitle">My talent</p>
-        </div>
+        </motion.div>
         <div className="skills__container grid section-padd">
           <Skills />
         </div>

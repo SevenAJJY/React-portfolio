@@ -10,7 +10,6 @@
   justify-content: center;
   flex-direction: column;
   gap: 10px;
-  background: url("./assets/main-bg-dark.png");
   backdrop-filter: blur(5px);
 }
 
@@ -47,10 +46,6 @@
   border-right: 2px solid transparent;
   border-left: 0px solid transparent;
 }
-
-/* body.theme-dark {
-
-} */
 
 .pre-loader .logo a span::after {
   content: "";

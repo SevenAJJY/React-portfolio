@@ -4,6 +4,7 @@ import Item from "./Item";
 import List from "./List";
 import { projects } from "../../data/data";
 import { AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const allNavList = [
   "all",
@@ -29,10 +30,19 @@ const Portfolio = () => {
       <div className="circle-draw circle-draw__welcome-12 circle-draw--bordered"></div>
       <div className="circle-draw circle-draw__welcome-13 circle-draw--bordered"></div>
       <div className="circle-draw circle-draw__welcome-14 circle-draw--bordered"></div>
-      <div className="section-title">
+      <motion.div
+        initial={{ transform: "translateY(-100px)" }}
+        animate={{ transform: "translateY(0px)" }}
+        exit={{
+          transform: "translateY(-100px)",
+          transition: { duration: 0.1 },
+        }}
+        transition={{ duration: 0.75, ease: "easeOut" }}
+        className="section-title"
+      >
         <h2 className="section__title title-size">Portfolio</h2>
         <p className="section__subtitle">Must recent works</p>
-      </div>
+      </motion.div>
 
       <List list={navList} filterItems={filterItems} />
       <div className="portfolio__container container grid section-padd">

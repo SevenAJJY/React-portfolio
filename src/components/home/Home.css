@@ -1,8 +1,7 @@
-.home {
+.home__container {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   gap: 4rem;
 }
 
@@ -105,6 +104,7 @@
   font-size: 1.3rem;
   font-weight: 500;
   margin: 0.7rem 0 1rem 0.5rem;
+  white-space: nowrap;
 }
 
 .home__port:first-child {
@@ -189,7 +189,7 @@
 /* for large devices */
 
 @media screen and (max-width: 992px) {
-  .home {
+  .home__container {
     flex-direction: column;
     gap: 3rem;
   }

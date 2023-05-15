@@ -2,13 +2,24 @@ import React from "react";
 import { skills } from "../../data/data";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   return (
     <>
       {skills.map((skill) => {
         return (
-          <div className="skill__box" key={skill.id}>
+          <motion.div
+            initial={{ transform: "translateY(100px)" }}
+            animate={{ transform: "translateY(0px)" }}
+            exit={{
+              transform: "translateY(100px)",
+              transition: { duration: 0.1 },
+            }}
+            transition={{ duration: 0.75, ease: "easeOut" }}
+            className="skill__box"
+            key={skill.id}
+          >
             <div className="progress__circle">
               <CircularProgressbar
                 value={skill.progress}
@@ -25,7 +36,7 @@ const Skills = () => {
             </div>
 
             <small className="skills__name">{skill.name}</small>
-          </div>
+          </motion.div>
         );
       })}
     </>
