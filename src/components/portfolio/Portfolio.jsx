@@ -45,11 +45,20 @@ const Portfolio = () => {
       </motion.div>
 
       <List list={navList} filterItems={filterItems} />
-      <div className="portfolio__container container grid section-padd">
+      <motion.div
+        initial={{ transform: "translateY(100px)" }}
+        animate={{ transform: "translateY(0px)" }}
+        exit={{
+          transform: "translateY(100px)",
+          transition: { duration: 0.1 },
+        }}
+        transition={{ duration: 0.75, ease: "easeOut" }}
+        className="portfolio__container container grid section-padd"
+      >
         <AnimatePresence initial={false}>
           <Item projectItems={projectItems} />
         </AnimatePresence>
-      </div>
+      </motion.div>
     </section>
   );
 };

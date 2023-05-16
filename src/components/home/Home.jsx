@@ -20,7 +20,16 @@ const Home = () => {
         transition={{ duration: 0.75, ease: "easeOut" }}
         className="home__container"
       >
-        <div className="welcome__portrait-container">
+        <motion.div
+          initial={{ transform: "translateY(100px)" }}
+          animate={{ transform: "translateY(0px)" }}
+          exit={{
+            transform: "translateY(100px)",
+            transition: { duration: 0.1 },
+          }}
+          transition={{ duration: 0.75, ease: "easeOut" }}
+          className="welcome__portrait-container"
+        >
           <div className="mask-container">
             <svg
               style={{ stroke: "#a1a1a1", fill: "none" }}
@@ -34,15 +43,24 @@ const Home = () => {
             </svg>
             <div className="picture__colored picture"></div>
           </div>
-        </div>
-        <div className="home__text">
+        </motion.div>
+        <motion.div
+          initial={{ transform: "translateY(-100px)" }}
+          animate={{ transform: "translateY(0px)" }}
+          exit={{
+            transform: "translateY(-100px)",
+            transition: { duration: 0.1 },
+          }}
+          transition={{ duration: 0.75, ease: "easeOut" }}
+          className="home__text"
+        >
           <span style={{ display: "flex" }}>
             Hi there ! I'm{" "}
             <span style={{ color: "var(--main-color)" }}>SevenAJJY</span>.
           </span>
           <h1>Portfolio</h1>
           <p>of a Creative Freelancer & Fullstack Developer ―</p>
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );
