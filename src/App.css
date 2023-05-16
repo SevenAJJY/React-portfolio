@@ -74,6 +74,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background: url("./assets/main-bg-light.png");
+  color: var(--text-color);
+}
+
 body,
 button,
 input,
@@ -81,11 +86,6 @@ textarea {
   font-family: var(--body-font);
   font-size: var(--fs-md);
   font-weight: var(--fw-500);
-}
-
-body {
-  background: url("./assets/main-bg-light.png");
-  color: var(--text-color);
 }
 
 h1,
@@ -194,6 +194,7 @@ img {
 
 .main__app {
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 /******************************************* LAYOUT **********************************************/
