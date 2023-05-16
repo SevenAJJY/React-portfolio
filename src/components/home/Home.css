@@ -239,7 +239,7 @@
     font-size: 3rem;
   }
   .home__text p {
-    font-size: var(--fs-sm);
+    font-size: var(--fs-xs);
   }
   .circle-draw__welcome:nth-child(5) {
     top: 14rem;

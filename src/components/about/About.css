@@ -569,6 +569,9 @@
   .home__port-10 {
     display: none;
   }
+  .about__text-content {
+    font-size: var(--fs-sm);
+  }
 }
 
 /* for small devices */

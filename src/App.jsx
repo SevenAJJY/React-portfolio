@@ -25,7 +25,7 @@ const App = () => {
     }, 3000);
   }, []);
   return (
-    <>
+    <main className="main__app">
       {loading ? (
         <Preloader />
       ) : (
@@ -48,7 +48,7 @@ const App = () => {
           </Routes>
         </Router>
       )}
-    </>
+    </main>
   );
 };
 

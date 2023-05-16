@@ -48,10 +48,6 @@
   --body-font: "Josefin Sans", "Poppins", sans-serif;
 }
 
-body {
-  background: url("./assets/main-bg-light.png");
-}
-
 body.theme-dark {
   transition: all 0.5s ease;
   background: url("./assets/main-bg-dark.png");
@@ -88,7 +84,7 @@ textarea {
 }
 
 body {
-  overflow-x: hidden;
+  background: url("./assets/main-bg-light.png");
   color: var(--text-color);
 }
 
@@ -194,6 +190,10 @@ img {
   position: relative;
   padding: 30px;
   border-radius: 20px;
+}
+
+.main__app {
+  overflow-x: hidden;
 }
 
 /******************************************* LAYOUT **********************************************/
