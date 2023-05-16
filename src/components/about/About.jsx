@@ -101,7 +101,7 @@ const About = () => {
               transition={{ duration: 1.01, ease: "easeOut" }}
               className="about-btn"
             >
-              <a className="about__btn" href={cv} download="">
+              <a className="main__btn" href={cv} download="">
                 <span className="top-key"></span>
                 <span className="text">Download CV</span>
                 <span className="bottom-key-1"></span>

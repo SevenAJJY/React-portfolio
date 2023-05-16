@@ -77,6 +77,7 @@ html {
 body {
   background: url("./assets/main-bg-light.png");
   color: var(--text-color);
+  overflow-y: auto;
 }
 
 body,
@@ -118,6 +119,25 @@ img {
 ::selection {
   background-color: var(--main-color);
   color: var(--text-white);
+}
+
+body::-webkit-scrollbar {
+  width: 11px;
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--main-color);
+}
+
+body::-webkit-scrollbar-track {
+  background: #d6d6d6;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 6px;
+  border: 2px solid #d6d6d6;
 }
 
 /******************************************* REUSABLE CSS CLASSES **********************************************/
@@ -193,8 +213,112 @@ img {
 }
 
 .main__app {
-  overflow-x: hidden;
-  min-height: 100vh;
+  overflow: hidden;
+}
+
+.main__btn {
+  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid var(--main-color);
+  box-sizing: border-box;
+  color: var(--text-white);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: var(--fw-700);
+  letter-spacing: 0.05em;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 1.25em 2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: var(--fs-sm);
+  margin-top: 5px;
+}
+
+.main__btn::before {
+  content: " ";
+  width: 1.5625rem;
+  height: 2px;
+  background: var(--main-color);
+  top: 50%;
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: center;
+  transition: background 0.3s linear, width 0.3s linear;
+}
+
+.main__btn .text {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  padding-left: 2em;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.main__btn .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  background: var(--modal-bg);
+  transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.main__btn .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  background: var(--modal-bg);
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.main__btn .bottom-key-2 {
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  background: var(--modal-bg);
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.main__btn:hover {
+  color: white;
+  background: var(--main-color);
+}
+
+.main__btn:hover::before {
+  width: 0.9375rem;
+  background: white;
+}
+
+.main__btn:hover .text {
+  color: white;
+  padding-left: 1.5em;
+}
+
+.main__btn:hover .top-key {
+  left: -2px;
+  width: 0px;
+}
+
+.main__btn:hover .bottom-key-1,
+.main__btn:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
 }
 
 /******************************************* LAYOUT **********************************************/

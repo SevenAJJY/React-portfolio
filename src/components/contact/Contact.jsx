@@ -260,7 +260,7 @@ const Contact = () => {
             }}
             transition={{ duration: 1, ease: "easeOut" }}
             type="submit"
-            className="about__btn"
+            className="main__btn"
           >
             <span className="top-key"></span>
             <span className="text">Send Now</span>

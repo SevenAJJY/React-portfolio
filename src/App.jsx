@@ -1,22 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const LazyLoading = React.lazy(() => import("./components/about/About"));
 import Navbar from "./components/navbar/Navbar";
 import Home from "./components/home/Home";
-import About from "./components/about/About";
 import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
 import Themes from "./components/Themes/Themes";
 import Preloader from "./components/preloader/Preloader";
 
 const App = () => {
-  // const location = useLocation();
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
